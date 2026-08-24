@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Patnala | AI/ML Engineer Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="AI/ML Engineer specializing in Generative AI, Agentic AI, and LLM orchestration. Experienced in LangGraph workflows, RAG pipelines, and RAGAS evaluation.">
+  <meta name="author" content="Rahul Patnala">
+  <meta name="keywords" content="AI, ML, Generative AI, Agentic AI, LLM orchestration, LangGraph, RAG, Spring Boot, FastAPI, Python">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+
+  <!-- HERO SECTION -->
+  <header class="container" style="padding-top: 1rem;">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <h1>Hi, I'm Rahul Patnala 👋</h1>
+        <p>AI/ML Engineer specializing in <strong>Generative AI</strong>, <strong>Agentic AI</strong>, and <strong>LLM orchestration</strong>. Experienced in designing multi-agent LangGraph workflows, RAG pipelines, hybrid retrieval systems, and tool-enabled applications.</p>
+        <div class="btn-group">
+          <!-- Point to local resume placeholder or online version -->
+          <a href="resume.pdf" class="btn btn-primary" download="Rahul_Patnala_Resume.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 18px; height: 18px; margin-right: 8px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            Download Resume
+          </a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <!-- Sleek, premium AI/ML Engineer profile SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+          <defs>
+            <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4f46e5" />
+              <stop offset="100%" stop-color="#06b6d4" />
+            </linearGradient>
+            <filter id="avatarShadow" x="-10%" y="-10%" width="120%" height="120%">
+              <drop-shadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.15"/>
+            </filter>
+          </defs>
+          <rect width="200" height="200" fill="url(#avatarGrad)" />
+          
+          <!-- Silhouette -->
+          <circle cx="100" cy="85" r="28" fill="#ffffff" filter="url(#avatarShadow)" />
+          <path d="M60,152 C60,125 78,105 100,105 C122,105 140,125 140,152" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+          
+          <!-- Neural Network Nodes & Mesh Overlay representing AI/ML -->
+          <circle cx="45" cy="50" r="4" fill="#ffffff" opacity="0.7" />
+          <circle cx="155" cy="50" r="4" fill="#ffffff" opacity="0.7" />
+          <circle cx="35" cy="100" r="3" fill="#ffffff" opacity="0.5" />
+          <circle cx="165" cy="100" r="3.5" fill="#ffffff" opacity="0.6" />
+          
+          <!-- Connections -->
+          <line x1="45" y1="50" x2="100" y2="85" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5" />
+          <line x1="155" y1="50" x2="100" y2="85" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5" />
+          <line x1="35" y1="100" x2="100" y2="85" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.4" />
+          <line x1="165" y1="100" x2="100" y2="85" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.4" />
+          <line x1="45" y1="50" x2="35" y2="100" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+          <line x1="155" y1="50" x2="165" y2="100" stroke="#ffffff" stroke-width="1" opacity="0.3" />
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="container">
+    <h2 class="section-title">About</h2>
+    <div class="about-content">
+      <p>I am a passionate AI/ML Engineer with a specialization in <strong>Computer Science and Engineering (Artificial Intelligence and Machine Learning)</strong>. My technical playground revolves around orchestrating complex LLM behaviors, setting up multi-agent architectures using <strong>LangGraph</strong>, and building enterprise-grade, high-precision retrieval systems.</p>
+      <p>Beyond model integration, I focus heavily on creating production-grade AI applications by implementing strict safety guardrails (using <strong>NVIDIA NeMo Guardrails</strong>), state persistence layers (using <strong>Supabase/PostgreSQL</strong>), and robust evaluations via <strong>RAGAS</strong> and <strong>LangSmith</strong> to ensure reliability, observability, and cost normalization.</p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="container">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+      
+      <!-- Experience Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card timeline-card">
+          <div class="company-logo" aria-label="Cognizant logo placeholder">
+            <!-- Cognitive/Company representation SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu">
+              <rect width="16" height="16" x="4" y="4" rx="2"/>
+              <rect width="6" height="6" x="9" y="9" rx="1"/>
+              <path d="M9 1v3"/>
+              <path d="M15 1v3"/>
+              <path d="M9 20v3"/>
+              <path d="M15 20v3"/>
+              <path d="M20 9h3"/>
+              <path d="M20 15h3"/>
+              <path d="M1 9h3"/>
+              <path d="M1 15h3"/>
+            </svg>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <h3>GenC Intern</h3>
+                <div class="card-subtitle">Cognizant</div>
+              </div>
+              <span class="duration-badge">Feb 2026 – Jun 2026</span>
+            </div>
+            <ul class="card-bullets">
+              <li><strong>ComNet360 Platform:</strong> Developing an enterprise communications system using a Spring Boot microservices architecture, featuring an API Gateway, JWT-based RBAC, and automated SLA breach detection.</li>
+              <li>Building a React-based frontend with role-specific dashboards and integrating multiple backend services through a centralized gateway for real-time incident analytics.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      
+      <!-- Category 1: Languages -->
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <div class="skill-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
+        </div>
+      </div>
+
+      <!-- Category 2: Generative AI -->
+      <div class="skill-category">
+        <h3>Generative AI</h3>
+        <div class="skill-pills">
+          <span class="skill-pill">Generative AI</span>
+          <span class="skill-pill">Agentic AI</span>
+          <span class="skill-pill">LLMs</span>
+          <span class="skill-pill">LangGraph</span>
+          <span class="skill-pill">LangChain</span>
+          <span class="skill-pill">RAG</span>
+          <span class="skill-pill">Prompt Engineering</span>
+          <span class="skill-pill">Structured Outputs</span>
+          <span class="skill-pill">LoRA Fine-Tuning</span>
+          <span class="skill-pill">MCP</span>
+        </div>
+      </div>
+
+      <!-- Category 3: Machine Learning -->
+      <div class="skill-category">
+        <h3>Machine Learning</h3>
+        <div class="skill-pills">
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">Deep Learning</span>
+          <span class="skill-pill">NLP</span>
+          <span class="skill-pill">Scikit-Learn</span>
+          <span class="skill-pill">TensorFlow</span>
+          <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Pandas</span>
+        </div>
+      </div>
+
+      <!-- Category 4: Backend & Frameworks -->
+      <div class="skill-category">
+        <h3>Backend & Web</h3>
+        <div class="skill-pills">
+          <span class="skill-pill">Spring Boot</span>
+          <span class="skill-pill">FastAPI</span>
+          <span class="skill-pill">Flask</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">Microservices</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">Streamlit</span>
+        </div>
+      </div>
+
+      <!-- Category 5: AI Infrastructure -->
+      <div class="skill-category">
+        <h3>AI Infrastructure</h3>
+        <div class="skill-pills">
+          <span class="skill-pill">Qdrant</span>
+          <span class="skill-pill">ChromaDB</span>
+          <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">Supabase</span>
+          <span class="skill-pill">Hugging Face</span>
+          <span class="skill-pill">BGE Embeddings</span>
+          <span class="skill-pill">FlashRank</span>
+        </div>
+      </div>
+
+      <!-- Category 6: Tools & Evaluation -->
+      <div class="skill-category">
+        <h3>Tools & Evaluation</h3>
+        <div class="skill-pills">
+          <span class="skill-pill">RAGAS</span>
+          <span class="skill-pill">LangSmith</span>
+          <span class="skill-pill">NeMo Guardrails</span>
+          <span class="skill-pill">Portkey</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="container">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      
+      <!-- Project 1 -->
+      <div class="card project-card">
+        <div class="project-cover" aria-label="TourAlly visual cover">
+          <!-- Travel multi-agent route diagram in SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+            <defs>
+              <linearGradient id="proj1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0284c7" />
+                <stop offset="100%" stop-color="#0d9488" />
+              </linearGradient>
+            </defs>
+            <rect width="400" height="200" fill="url(#proj1Grad)" />
+            <circle cx="200" cy="100" r="45" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 4" opacity="0.6" />
+            <circle cx="200" cy="100" r="12" fill="#ffffff" />
+            
+            <!-- Agent Nodes -->
+            <circle cx="120" cy="60" r="8" fill="#ffffff" />
+            <circle cx="280" cy="60" r="8" fill="#ffffff" />
+            <circle cx="120" cy="140" r="8" fill="#ffffff" />
+            <circle cx="280" cy="140" r="8" fill="#ffffff" />
+            
+            <!-- Node links -->
+            <line x1="200" y1="100" x2="120" y2="60" stroke="#ffffff" stroke-width="2.5" />
+            <line x1="200" y1="100" x2="280" y2="60" stroke="#ffffff" stroke-width="2.5" />
+            <line x1="200" y1="100" x2="120" y2="140" stroke="#ffffff" stroke-width="2.5" />
+            <line x1="200" y1="100" x2="280" y2="140" stroke="#ffffff" stroke-width="2.5" />
+            
+            <!-- Icon/Text labels -->
+            <text x="200" y="104" font-family="'Inter', sans-serif" font-size="10" fill="#0284c7" text-anchor="middle" font-weight="bold">AI</text>
+            <text x="120" y="44" font-family="'Inter', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">Flights</text>
+            <text x="280" y="44" font-family="'Inter', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">Hotels</text>
+            <text x="120" y="162" font-family="'Inter', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">Budget</text>
+            <text x="280" y="162" font-family="'Inter', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">Weather</text>
+          </svg>
+        </div>
+        <div class="project-info">
+          <h3>TourAlly</h3>
+          <span class="project-category">Multi-Agent AI Travel Planner</span>
+          <p>Built a multi-agent LangGraph workflow using a supervisor-specialist architecture to dynamically route requests across Flights, Hotels, Weather, and Budget agents powered by Llama models via Groq. Features Model Context Protocol (MCP) integrations, human-in-the-loop checkpoints, and observability.</p>
+          <div class="badge-list" style="margin-bottom: 1.25rem;">
+            <span class="badge">LangGraph</span>
+            <span class="badge">Groq</span>
+            <span class="badge">MCP</span>
+            <span class="badge">Supabase</span>
+            <span class="badge">LangSmith</span>
+          </div>
+          <div class="project-actions">
+            <!-- Replace with real link when ready -->
+            <a href="https://github.com/rahul-1809" target="_blank" class="btn btn-secondary btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 16px; height: 16px; margin-right: 6px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card project-card">
+        <div class="project-cover" aria-label="BKIP visual cover">
+          <!-- Intelligent RAG system schematic in SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="100%" height="100%">
+            <defs>
+              <linearGradient id="proj2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4f46e5" />
+                <stop offset="100%" stop-color="#7c3aed" />
+              </linearGradient>
+            </defs>
+            <rect width="400" height="200" fill="url(#proj2Grad)" />
+            
+            <!-- DB cylinders representing Vector DB -->
+            <path d="M120,70 C120,60 160,60 160,70 C160,80 120,80 120,70 Z" fill="none" stroke="#ffffff" stroke-width="2" />
+            <path d="M120,70 L120,110 C120,120 160,120 160,110 L160,70" fill="none" stroke="#ffffff" stroke-width="2" />
+            <path d="M120,90 C120,100 160,100 160,90" fill="none" stroke="#ffffff" stroke-width="2" />
+            
+            <text x="140" y="93" font-family="'Inter', sans-serif" font-size="8" fill="#ffffff" text-anchor="middle" font-weight="bold">QDRANT</text>
+            
+            <!-- Document / Policy representation -->
+            <rect x="240" y="65" width="40" height="50" rx="3" fill="none" stroke="#ffffff" stroke-width="2" />
+            <line x1="248" y1="78" x2="272" y2="78" stroke="#ffffff" stroke-width="1.5" />
+            <line x1="248" y1="88" x2="272" y2="88" stroke="#ffffff" stroke-width="1.5" />
+            <line x1="248" y1="98" x2="264" y2="98" stroke="#ffffff" stroke-width="1.5" />
+            
+            <!-- Bidirectional arrow representing hybrid retrieval RAG -->
+            <path d="M175,90 L225,90" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+            <polygon points="175,90 182,85 182,95" fill="#ffffff" />
+            <polygon points="225,90 218,85 218,95" fill="#ffffff" />
+            
+            <text x="200" y="78" font-family="'Inter', sans-serif" font-size="7" fill="#ffffff" text-anchor="middle">Rerank</text>
+            <text x="200" y="115" font-family="'Inter', sans-serif" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="bold">BKIP RAG</text>
+          </svg>
+        </div>
+        <div class="project-info">
+          <h3>Banking Knowledge Platform</h3>
+          <span class="project-category">Agentic RAG Knowledge Platform (BKIP)</span>
+          <p>Architected a stateful Agentic RAG system using LangGraph and FastAPI for querying banking policies, RBI circulars, and internal guidelines. Employs a hybrid Qdrant retrieval pipeline, FlashRank reranking, NeMo guardrails, and LLM fallback routing via Portkey.</p>
+          <div class="badge-list" style="margin-bottom: 1.25rem;">
+            <span class="badge">FastAPI</span>
+            <span class="badge">Qdrant</span>
+            <span class="badge">BGE Embeddings</span>
+            <span class="badge">NeMo Guardrails</span>
+            <span class="badge">RAGAS</span>
+          </div>
+          <div class="project-actions">
+            <!-- Replace with real link when ready -->
+            <a href="https://github.com/rahul-1809" target="_blank" class="btn btn-secondary btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width: 16px; height: 16px; margin-right: 6px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+  <section id="certifications" class="container">
+    <h2 class="section-title">Certifications & Achievements</h2>
+    
+    <!-- Achievements part -->
+    <h3 style="margin: 1rem 0 1.5rem 0; font-size: 1.3rem; font-weight: 600; opacity: 0.9;">Achievements</h3>
+    <div class="certs-grid" style="margin-bottom: 3rem;">
+      <!-- Achievement 1 -->
+      <div class="card cert-card">
+        <div class="cert-icon" aria-label="Trophy icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-2.25a1.125 1.125 0 0 0-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5Zm6 0h.008v.008H15V10.5Zm-6 3h.008v.008H9v-.008Zm6 0h.008v.008H15v-.008ZM6 5.25h12M6 2.25h12" />
+          </svg>
+        </div>
+        <h3>1st Place - DataCraze</h3>
+        <div class="cert-issuer">Stepcone 2025</div>
+        <p style="font-size: 0.85rem; margin-top: 0.25rem;">Analyzed a 100K+ Twitter dataset to identify actionable sentiment trends and developed an interactive dashboard.</p>
+        <a href="https://github.com/rahul-1809" target="_blank" class="cert-link">View Project</a>
+      </div>
+
+      <!-- Achievement 2 -->
+      <div class="card cert-card">
+        <div class="cert-icon" aria-label="Trophy icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-2.25a1.125 1.125 0 0 0-1.125 1.125v3.375m9 0h-9M9 10.5h.008v.008H9V10.5Zm6 0h.008v.008H15V10.5Zm-6 3h.008v.008H9v-.008Zm6 0h.008v.008H15v-.008ZM6 5.25h12M6 2.25h12" />
+          </svg>
+        </div>
+        <h3>1st Place - DataViz</h3>
+        <div class="cert-issuer">Stepcone 2024</div>
+        <p style="font-size: 0.85rem; margin-top: 0.25rem;">Developed a geographic sales analytics dashboard using feature engineering, custom mapping, and summaries.</p>
+        <a href="https://github.com/rahul-1809" target="_blank" class="cert-link">View Project</a>
+      </div>
+    </div>
+
+    <!-- Certifications part -->
+    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem; font-weight: 600; opacity: 0.9;">Certifications</h3>
+    <div class="certs-grid">
+      <!-- Cert 1 -->
+      <div class="card cert-card">
+        <div class="cert-icon" aria-label="Certificate icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a50.58 50.58 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+          </svg>
+        </div>
+        <h3>AI & Data Science Program</h3>
+        <div class="cert-issuer">DRISHTI CPS, IIT Indore</div>
+        <div class="cert-date">Issued 2025</div>
+        <!-- Link can point to real credential or placeholder -->
+        <a href="#" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Cert 2 -->
+      <div class="card cert-card">
+        <div class="cert-icon" aria-label="Certificate icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a50.58 50.58 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+          </svg>
+        </div>
+        <h3>Deep Learning</h3>
+        <div class="cert-issuer">NPTEL IIT Ropar</div>
+        <div class="cert-date">Issued 2025 • Top 1% Performer</div>
+        <a href="#" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Cert 3 -->
+      <div class="card cert-card">
+        <div class="cert-icon" aria-label="Certificate icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84a50.58 50.58 0 0 0-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+          </svg>
+        </div>
+        <h3>Data Science & ML Bootcamp</h3>
+        <div class="cert-issuer">Udemy</div>
+        <div class="cert-date">Issued 2025</div>
+        <a href="#" class="cert-link">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-layout">
+      
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <p class="contact-info-subtitle">I'm always open to discussing new projects, opportunities, or research collaborations. Feel free to reach out using the form or through the channels below!</p>
+        
+        <div class="contact-details">
+          
+          <!-- Email -->
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <span>Email</span>
+              <a href="mailto:patnalarahul1809@gmail.com">patnalarahul1809@gmail.com</a>
+            </div>
+          </div>
+          
+          <!-- Socials -->
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+              </svg>
+            </div>
+            <div class="contact-item-text">
+              <span>Social Media</span>
+              <div>
+                <a href="https://linkedin.com" target="_blank" style="margin-right: 12px; font-weight: 500;">LinkedIn</a>
+                <a href="https://github.com/rahul-1809" target="_blank" style="font-weight: 500;">GitHub</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Status Card -->
+        <div class="status-card">
+          <div class="status-title">
+            <div class="status-dot"></div>
+            <span>Available for opportunities</span>
+          </div>
+          <p>I'm currently looking for internships and collaborative research projects in Generative AI, RAG optimization, and agentic systems development.</p>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <!-- Hook up a Formspree action url by replacing this placeholder when deploying -->
+        <form id="contact-form" action="" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="Your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="form-input" placeholder="Your message" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          
+          <!-- Inline message area -->
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p>&copy; 2026 Rahul Patnala. All rights reserved. Designed in minimalist dock theme.</p>
+  </footer>
+
+  <!-- FLOATING DOCK NAVIGATION -->
+  <div class="dock-container">
+    <nav class="dock" role="navigation">
+      
+      <button class="dock-item active" data-target="header" data-tooltip="Home" aria-label="Scroll to home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+      </button>
+      
+      <button class="dock-item" data-target="#about" data-tooltip="About" aria-label="Scroll to about">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </svg>
+      </button>
+
+      <button class="dock-item" data-target="#experience" data-tooltip="Experience" aria-label="Scroll to experience">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 .621-.504 1.125-1.125 1.125H4.875c-.621 0-1.125-.504-1.125-1.125v-4.25m16.5 0a2.25 2.25 0 0 0-2.25-2.25H5.625a2.25 2.25 0 0 0-2.25 2.25m16.5 0v-4.75A2.25 2.25 0 0 0 17.625 5H6.375A2.25 2.25 0 0 0 4.125 7.25v4.75m15.825 2.18-.53 3.185a.75.75 0 0 1-1.077.585l-3.056-1.528a.75.75 0 0 0-.67 0l-3.056 1.528a.75.75 0 0 1-1.077-.585l-.53-3.185a.75.75 0 0 1 .53-.84l3.185-.53a.75.75 0 0 0 .585-.585l1.528-3.056a.75.75 0 0 1 1.34 0l1.528 3.056a.75.75 0 0 0 .585.585l3.185.53a.75.75 0 0 1 .53.84Z" />
+        </svg>
+      </button>
+
+      <button class="dock-item" data-target="#skills" data-tooltip="Skills" aria-label="Scroll to technical skills">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+        </svg>
+      </button>
+
+      <button class="dock-item" data-target="#projects" data-tooltip="Projects" aria-label="Scroll to projects">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.008 1.24l.885 1.77a2.25 2.25 0 0 0 2.007 1.24h1.98a2.25 2.25 0 0 0 2.007-1.24l.885-1.77a2.25 2.25 0 0 1 2.007-1.24h3.86m-18 0h18a2.25 2.25 0 0 1 2.25 2.25v4.25A2.25 2.25 0 0 1 19.5 21h-15a2.25 2.25 0 0 1-2.25-2.25V15.75A2.25 2.25 0 0 1 4.5 13.5Zm0-4.5h15A2.25 2.25 0 0 1 21.75 11.25V12h-19.5v-.75A2.25 2.25 0 0 1 4.5 9Zm0 0V5.25A2.25 2.25 0 0 1 6.75 3h10.5a2.25 2.25 0 0 1 2.25 2.25V9M9 3v1.5m6-1.5v1.5" />
+        </svg>
+      </button>
+
+      <button class="dock-item" data-target="#contact" data-tooltip="Contact" aria-label="Scroll to contact">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+        </svg>
+      </button>
+
+      <div class="dock-separator"></div>
+
+      <!-- Theme Switch Toggler -->
+      <button id="theme-toggle" class="dock-item" data-tooltip="Dark Mode" aria-label="Toggle dark/light mode">
+        <!-- SVG will be injected by JavaScript -->
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>
