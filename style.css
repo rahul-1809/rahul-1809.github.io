@@ -98,7 +98,13 @@ body {
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+header {
+  padding-top: 7rem;
+  padding-bottom: 3.5rem;
 }
 
 section {
@@ -979,6 +985,11 @@ footer p {
     font-size: 1.8rem;
   }
   
+  header {
+    padding-top: 4.5rem;
+    padding-bottom: 2.25rem;
+  }
+
   section {
     padding: 4.5rem 0 2.25rem 0;
   }
