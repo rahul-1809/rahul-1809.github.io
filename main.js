@@ -1,4 +1,90 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-ready');
+
+  // --- SCROLL REVEAL ANIMATIONS ---
+  const revealGroups = [
+    'section',
+    '.timeline-item',
+    '.education-item',
+    '.skill-category',
+    '.project-card',
+    '.cert-card',
+    '.contact-item',
+    '.status-card',
+    '.contact-form-container'
+  ];
+
+  const revealElements = document.querySelectorAll(revealGroups.join(', '));
+
+  revealElements.forEach((element, index) => {
+    const rowDelay = index % 6;
+    element.classList.add('reveal');
+    element.style.setProperty('--reveal-delay', `${rowDelay * 70}ms`);
+  });
+
+  document.querySelectorAll('.contact-info, .about-content').forEach(element => {
+    element.classList.add('reveal-left');
+  });
+
+  document.querySelectorAll('.contact-form-container, .hero-avatar').forEach(element => {
+    element.classList.add('reveal-right');
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -12% 0px',
+    threshold: 0.12
+  });
+
+  revealElements.forEach(element => revealObserver.observe(element));
+  document.querySelector('header')?.classList.add('reveal-visible');
+
+  // --- HERO MICRO-PARALLAX ---
+  const heroLayout = document.querySelector('.hero-layout');
+  const heroAvatar = document.querySelector('.hero-avatar');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (heroLayout && heroAvatar && !prefersReducedMotion) {
+    heroLayout.addEventListener('pointermove', (event) => {
+      const bounds = heroLayout.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 10;
+      const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 10;
+
+      heroAvatar.style.setProperty('--tilt-x', `${x}px`);
+      heroAvatar.style.setProperty('--tilt-y', `${y}px`);
+    });
+
+    heroLayout.addEventListener('pointerleave', () => {
+      heroAvatar.style.setProperty('--tilt-x', '0px');
+      heroAvatar.style.setProperty('--tilt-y', '0px');
+    });
+  }
+
+  // --- TIMELINE SCROLL PROGRESS ---
+  const timeline = document.querySelector('.timeline');
+
+  function updateTimelineProgress() {
+    if (!timeline) return;
+
+    const rect = timeline.getBoundingClientRect();
+    const viewportCenter = window.innerHeight * 0.58;
+    const rawProgress = (viewportCenter - rect.top) / rect.height;
+    const progress = Math.min(Math.max(rawProgress, 0), 1) * 100;
+
+    timeline.style.setProperty('--timeline-progress', `${progress}%`);
+  }
+
+  updateTimelineProgress();
+  window.addEventListener('scroll', updateTimelineProgress, { passive: true });
+  window.addEventListener('resize', updateTimelineProgress);
+
   // --- FLOATING DOCK INTERACTIVE NAVIGATION ---
   const sections = document.querySelectorAll('section, header');
   const navItems = document.querySelectorAll('.dock-item[data-target]');
